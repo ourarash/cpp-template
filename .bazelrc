@@ -1,6 +1,8 @@
 # Address sanitizer configuration.
 # ASAN_SYMBOLIZER_PATH=/usr/local/Cellar/llvm/13.0.0_1/bin/llvm-symbolizer
 
+build --action_env=BAZEL_CXXOPTS="-std=c++17"
+
 # Address sanitizer config
 # Use with bazel run --config=asan or lsan
 build:asan --strip=never
