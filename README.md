@@ -145,7 +145,7 @@ A sample test file is [tests/cpplib_test.cc](tests/cpplib_test.cc) which uses [t
 You can run the test using [`bazel`](installing-bazel):
 
 ```bash
-bazel test tests:tests
+bazel test tests:all
 ```
 
 # More info on GLOG
