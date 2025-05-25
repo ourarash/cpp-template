@@ -4,7 +4,7 @@ cc_binary(
     name = "main_benchmark",
     srcs = ["main_benchmark.cc"],
     deps = [
-        "@com_google_benchmark//:benchmark",
+        "@google_benchmark//:benchmark",
     ],
 )
 
@@ -13,7 +13,7 @@ cc_binary(
     srcs = ["main_benchmark_adder.cc"],
     deps = [
         "//src/lib/search:SearchLib",
-        "@com_google_benchmark//:benchmark",
+        "@google_benchmark//:benchmark",
     ],
 )
 
@@ -22,7 +22,7 @@ cc_binary(
     srcs = ["main_benchmark_sort.cc"],
     deps = [
         "//src/lib/sort:SortLib",
-        "@com_google_benchmark//:benchmark",
+        "@google_benchmark//:benchmark",
     ],
 )
 
@@ -31,6 +31,6 @@ cc_binary(
     srcs = ["main_benchmark_search.cc"],
     deps = [
         "//src/lib/search:SearchLib",
-        "@com_google_benchmark//:benchmark",
+        "@google_benchmark//:benchmark",
     ],
 )
