@@ -1,0 +1,7 @@
+cc_library(
+    name = "usr_local_libs",
+    hdrs = glob(["include/**/*.h"]),
+    includes = ["include"],
+    linkopts = ["-L/usr/local/lib"],
+    visibility = ["//visibility:public"],
+)

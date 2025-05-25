@@ -1,0 +1,26 @@
+###############################################################################
+# Bazel now uses Bzlmod by default to manage external dependencies.
+# Please consider migrating your external dependencies from WORKSPACE to MODULE.bazel.
+#
+# For more details, please check https://github.com/bazelbuild/bazel/issues/18958
+###############################################################################
+module(name = "cpp-template", version = "1.0")
+
+bazel_dep(name = "rules_cc", version = "0.0.12")
+
+bazel_dep(name = "glog", version = "0.7.1")
+bazel_dep(name = "gflags", version = "2.2.2")
+bazel_dep(name = "abseil-cpp", version = "20250512.0")
+
+bazel_dep(name = "usr_local", version = "1.0")
+bazel_dep(name = "zlib", version = "1.0")
+
+local_path_override(
+    module_name = "usr_local",
+    path = "third_party/usr_local_override",
+)
+
+local_path_override(
+    module_name = "zlib",
+    path = "third_party/zlib_override",
+)
