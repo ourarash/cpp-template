@@ -1,0 +1,10 @@
+cc_library(
+    name = "zlib",
+    hdrs = glob(["include/**/*.h"]),
+    includes = ["include"],
+    linkopts = [
+        "-L/usr/local/opt/zlib/lib",
+        "-lz",
+    ],
+    visibility = ["//visibility:public"],
+)
