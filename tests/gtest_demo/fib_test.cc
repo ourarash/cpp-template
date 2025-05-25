@@ -15,11 +15,10 @@ int Fib(int n) {
   }
 
   // Recursive relationship
-  return Fib(n - 1) + Fib(n - 2);
+  return Fib(n - 1) + Fib(n - 2) + 1;
 }
 
-TEST(FibTest, NonNegativeValues) {
-  std::cout << "Fib(5)= " << Fib(5) << std::endl;
+TEST(FibTest, CanWorkCorrectlyForNonNegativeValues) {
   EXPECT_EQ(Fib(0), 0);
 
   EXPECT_EQ(Fib(1), 1);
@@ -29,7 +28,7 @@ TEST(FibTest, NonNegativeValues) {
   EXPECT_TRUE(Fib(6) == 8);
 }
 
-TEST(FibTest, FirstFiveNumber) {
+TEST(FibTest, FirstFiveNonNegativeNumber) {
   EXPECT_EQ(Fib(0), 0);
   EXPECT_EQ(Fib(1), 1);
   EXPECT_EQ(Fib(2), 1);
@@ -39,7 +38,7 @@ TEST(FibTest, FirstFiveNumber) {
   EXPECT_TRUE(Fib(4) == 3);
 }
 
-TEST(FibTest, NegativeValues) {
+TEST(FibTest, OutputsZeroForNegativeInputs) {
   EXPECT_LT(Fib(-1), 0);
   EXPECT_LT(Fib(-10), 0);
   EXPECT_THAT(Fib(-10), Lt(0));

@@ -15,7 +15,7 @@ int FindMax(std::vector<int> &inputs) {
   return result;
 }
 
-TEST(FindMax, SimpleTest1) {
+TEST(FindMax, SortedNumbers) {
   std::vector<int> inputs = {1, 2, 3, 4};
   EXPECT_EQ(FindMax(inputs), 4);
 }
@@ -33,6 +33,7 @@ TEST(FindMax, Size1) {
 TEST(FindMax, LargeSize) {
   std::vector<int> inputs = {1, 2, 4, 5, 3, 8, 100, 1000, 2, 4, 56, 76, 54};
   EXPECT_EQ(FindMax(inputs), 1000);
+  EXPECT_TRUE(FindMax(inputs) == 1000);
 }
 
 TEST(FindMax, AllZeros) {
