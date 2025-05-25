@@ -5,7 +5,7 @@ cc_test(
     srcs = ["on_call.cc"],
     deps = [
         "//tests/gmock_demo/bankserver:BankServerLib",
-        "@com_google_googletest//:gtest_main",
+        "@googletest//:gtest_main",
     ],
 )
 
@@ -14,7 +14,7 @@ cc_test(
     srcs = ["expect_call.cc"],
     deps = [
         "//tests/gmock_demo/bankserver:BankServerLib",
-        "@com_google_googletest//:gtest_main",
+        "@googletest//:gtest_main",
     ],
 )
 
@@ -23,7 +23,7 @@ cc_test(
     srcs = ["expect_call_matchers.cc"],
     deps = [
         "//tests/gmock_demo/bankserver:BankServerLib",
-        "@com_google_googletest//:gtest_main",
+        "@googletest//:gtest_main",
     ],
 )
 
@@ -32,7 +32,7 @@ cc_test(
     srcs = ["expect_call_order.cc"],
     deps = [
         "//tests/gmock_demo/bankserver:BankServerLib",
-        "@com_google_googletest//:gtest_main",
+        "@googletest//:gtest_main",
     ],
 )
 
@@ -41,7 +41,7 @@ cc_test(
     srcs = ["expect_call_side_effects.cc"],
     deps = [
         "//tests/gmock_demo/bankserver:BankServerLib",
-        "@com_google_googletest//:gtest_main",
+        "@googletest//:gtest_main",
     ],
 )
 
@@ -50,7 +50,7 @@ cc_test(
     srcs = ["nice_mock.cc"],
     deps = [
         "//tests/gmock_demo/bankserver:BankServerLib",
-        "@com_google_googletest//:gtest_main",
+        "@googletest//:gtest_main",
     ],
 )
 
@@ -59,7 +59,7 @@ cc_test(
     srcs = ["//tests/gmock_demo:expect_call_return.cc"],
     deps = [
         "//tests/gmock_demo/bankserver:BankServerLib",
-        "@com_google_googletest//:gtest_main",
+        "@googletest//:gtest_main",
     ],
 )
 
@@ -68,7 +68,7 @@ cc_test(
     srcs = ["expect_call_invoke.cc"],
     deps = [
         "//tests/gmock_demo/bankserver:BankServerLib",
-        "@com_google_googletest//:gtest_main",
+        "@googletest//:gtest_main",
     ],
 )
 
@@ -77,7 +77,7 @@ cc_test(
     srcs = ["expect_call_checkpoint.cc"],
     deps = [
         "//tests/gmock_demo/bankserver:BankServerLib",
-        "@com_google_googletest//:gtest_main",
+        "@googletest//:gtest_main",
     ],
 )
 
@@ -86,7 +86,7 @@ cc_test(
     srcs = ["expect_call_sticky_rules.cc"],
     deps = [
         "//tests/gmock_demo/bankserver:BankServerLib",
-        "@com_google_googletest//:gtest_main",
+        "@googletest//:gtest_main",
     ],
 )
 
@@ -95,7 +95,7 @@ cc_test(
     srcs = ["mock_non_virtual_classes.cc"],
     deps = [
         "//tests/gmock_demo/bankserver:BankServerLib",
-        "@com_google_googletest//:gtest_main",
+        "@googletest//:gtest_main",
     ],
 )
 
@@ -104,7 +104,7 @@ cc_test(
     srcs = ["mock_non_virtual_classes_non_pointer.cc"],
     deps = [
         "//tests/gmock_demo/bankserver:BankServerLib",
-        "@com_google_googletest//:gtest_main",
+        "@googletest//:gtest_main",
     ],
 )
 
@@ -112,7 +112,7 @@ cc_test(
     name = "mocking_free_function",
     srcs = ["mocking_free_function.cc"],
     deps = [
-        "@com_google_googletest//:gtest_main",
+        "@googletest//:gtest_main",
     ],
 )
 
@@ -120,7 +120,7 @@ cc_test(
     name = "delegate_to_fake",
     srcs = ["delegate_to_fake.cc"],
     deps = [
-        "@com_google_googletest//:gtest_main",
+        "@googletest//:gtest_main",
     ],
 )
 
@@ -129,7 +129,7 @@ cc_test(
     srcs = ["unspecified.cc"],
     deps = [
         "//tests/gmock_demo/bankserver:BankServerLib",
-        "@com_google_googletest//:gtest_main",
+        "@googletest//:gtest_main",
     ],
 )
 
@@ -138,7 +138,7 @@ cc_test(
     srcs = ["expect_call_cardinality.cc"],
     deps = [
         "//tests/gmock_demo/bankserver:BankServerLib",
-        "@com_google_googletest//:gtest_main",
+        "@googletest//:gtest_main",
     ],
 )
 
@@ -146,7 +146,7 @@ cc_test(
     name = "mocking_free_function_example",
     srcs = ["mocking_free_function_example.cc"],
     deps = [
-        "@com_google_googletest//:gtest_main",
+        "@googletest//:gtest_main",
     ],
 )
 
@@ -155,7 +155,7 @@ cc_test(
     srcs = ["expect_call_dodefault.cc"],
     deps = [
         "//tests/gmock_demo/bankserver:BankServerLib",
-        "@com_google_googletest//:gtest_main",
+        "@googletest//:gtest_main",
     ],
 )
 
@@ -164,6 +164,6 @@ cc_test(
     srcs = ["first_example.cc"],
     deps = [
         "//tests/gmock_demo/bankserver:BankServerLib",
-        "@com_google_googletest//:gtest_main",
+        "@googletest//:gtest_main",
     ],
 )
