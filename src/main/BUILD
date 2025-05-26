@@ -57,6 +57,7 @@ cc_binary(
 cc_binary(
     name = "main_address_sanitize_simple",
     srcs = ["main_address_sanitize_simple.cc"],
+    copts = ["-w"],  # This disables *all* warnings
     # Set this variable to the right path for llvm-symbolizer on your machine.
     env =
         {

@@ -178,7 +178,7 @@ cc_binary(
     srcs = ["hello_world_test_main.cc"],
     copts = ["--std=c++17"],
     deps = [
-        "@com_google_googletest//:gtest",
+        "@googletest//:gtest",
     ],
 )
 

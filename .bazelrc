@@ -3,15 +3,21 @@
 
 # Address sanitizer config
 # Use with bazel run --config=asan or lsan
-build:asan --strip=never
-build:asan --copt -fsanitize=address
-build:asan --copt -DADDRESS_SANITIZER
-build:asan --copt -O0
-build:asan --copt -g
-build:asan --copt -fno-omit-frame-pointer
-build:asan --linkopt -fsanitize=address
-build:asan --sandbox_debug 
-build:asan --spawn_strategy=standalone
+build:asan --strip=never                            # Keep symbols
+build:asan --copt=-fsanitize=address                # Enable address sanitizer
+build:asan --copt=-DADDRESS_SANITIZER               # Optional: only needed if your code uses this macro
+build:asan --copt=-O0                               
+build:asan --copt=-g                                # Debug info
+build:asan --copt=-fno-omit-frame-pointer           # Required for stack traces
+build:asan --linkopt=-fsanitize=address             # Link with ASAN
+build:asan --sandbox_debug                          # Optional: for easier debugging
+build:asan --spawn_strategy=standalone              # Good for sanitizers (avoid sandbox hiding issues)
+
+# Leak sanitizer config
+build:lsan --copt=-fsanitize=leak
+build:lsan --linkopt=-fsanitize=leak
+
+
 
 # undefined behavior sanitizer config
 build:ubsan --strip=never

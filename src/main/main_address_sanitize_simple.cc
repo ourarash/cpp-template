@@ -45,7 +45,8 @@ __attribute__((noinline)) void FunctionThatEscapesLocalObject() {
 char global_array[10];
 
 //-----------------------------------------------------------------------------
-int main() {
+int main(int argc, char *argv[]) {
+  // This line is just to make sure that the code is not optimized away.
   char *ptr = nullptr;
   *ptr = 5;
   if (argc != 2) {

@@ -28,7 +28,7 @@ You can use this template for most of your C++ projects with minimal changes.
 ## Prerequisite: Installing Bazel
 
 This repo uses `Bazel` for building C++ files.
-You can install Bazel using this [link](https://docs.bazel.build/versions/master/install.html).
+You can install Bazel using this [link](https://bazel.build/start).
 
 ## Cloning this repo
 
@@ -82,7 +82,7 @@ bazel run src/main:main_flags_absl
 You can run this using `bazel`:
 
 ```bash
-bazel run --config=asan //src/main:main_address_sanitize -- --choice=0
+bazel run --config=asan //src/main:main_address_sanitize -- 0
 ```
 
 Note that you should run bazel with `--config=asan`.
@@ -103,7 +103,7 @@ Output:
 You can run this using `bazel`:
 
 ```bash
-bazel run --config=ubsan //src/main:main_undefined_behavior_sanitizer -- --choice=0
+bazel run --config=ubsan //src/main:main_undefined_behavior_sanitizer -- 0
 ```
 
 Note that you should run bazel with `--config=ubsan`.
@@ -145,7 +145,7 @@ A sample test file is [tests/cpplib_test.cc](tests/cpplib_test.cc) which uses [t
 You can run the test using [`bazel`](installing-bazel):
 
 ```bash
-bazel test tests:tests
+bazel test //tests/gtest_demo:fib_test 
 ```
 
 # More info on GLOG

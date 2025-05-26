@@ -15,7 +15,7 @@ int Fib(int n) {
   }
 
   // Recursive relationship
-  return Fib(n - 1) + Fib(n - 2) + 1;
+  return Fib(n - 1) + Fib(n - 2);
 }
 
 TEST(FibTest, CanWorkCorrectlyForNonNegativeValues) {
@@ -24,8 +24,6 @@ TEST(FibTest, CanWorkCorrectlyForNonNegativeValues) {
   EXPECT_EQ(Fib(1), 1);
   EXPECT_EQ(Fib(5), 5);
   EXPECT_EQ(Fib(6), 8) << "Error: The factorial calculation was wrong!";
-
-  EXPECT_TRUE(Fib(6) == 8);
 }
 
 TEST(FibTest, FirstFiveNonNegativeNumber) {

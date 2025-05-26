@@ -11,7 +11,7 @@
 //-----------------------------------------------------------------------------
 
 class MockBankServer : public BankServer {
- public:
+public:
   MOCK_METHOD(void, Connect, (), (override));
   MOCK_METHOD(void, Disconnect, (), (override));
   MOCK_METHOD(void, Credit, (int, int), (override));
@@ -40,7 +40,7 @@ int Sum(int x, int y) { return x + y; }
 int Return10000() { return 10000; }
 
 class Helper {
- public:
+public:
   static int ComplexJobSingleParameter(int x) { return (x * x); }
   static int ComplexJobMultiParameter(int x, int y, int z) {
     return (x * y * z);
@@ -61,7 +61,6 @@ TEST(AtmMachine, CanWithdrawWithMultipleInvoke) {
       .WillOnce(Invoke(Square))
       .WillOnce(Square)
       .WillOnce(DoAll(InvokeWithoutArgs(PrintHello), Return(1000)))
-      .WillOnce(InvokeWithoutArgs(PrintHello))
       .WillOnce([](int n) { return Square(n); })
       .WillOnce([](int n) { return Sum(n, 1000); })
       .WillOnce([]() { return Return10000(); })
