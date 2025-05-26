@@ -25,7 +25,7 @@ cc_binary(
     srcs = ["main_logger.cc"],
     deps = [
         "//src/lib:CPPLib",
-        "@com_github_gflags_gflags//:gflags",
+        "@gflags",
         "@glog",
     ],
 )
@@ -34,9 +34,9 @@ cc_binary(
     name = "main_flags_absl",
     srcs = ["main_flags_absl.cc"],
     deps = [
-        "@com_google_absl//absl/flags:flag",
-        "@com_google_absl//absl/flags:parse",
-        "@com_google_absl//absl/flags:usage",
+        "@abseil-cpp//absl/flags:flag",
+        "@abseil-cpp//absl/flags:parse",
+        "@abseil-cpp//absl/flags:usage",
         "@glog",
     ],
 )
@@ -71,9 +71,9 @@ cc_binary(
     name = "main_undefined_behavior_sanitizer",
     srcs = ["main_undefined_behavior_sanitizer.cc"],
     deps = [
-        "@com_google_absl//absl/flags:flag",
-        "@com_google_absl//absl/flags:parse",
-        "@com_google_absl//absl/flags:usage",
+        "@abseil-cpp//absl/flags:flag",
+        "@abseil-cpp//absl/flags:parse",
+        "@abseil-cpp//absl/flags:usage",
         "@glog",
     ],
 )
